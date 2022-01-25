@@ -10,7 +10,7 @@
 		571C2CF2279F431100460444 /* HomeWork3_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C2CF1279F431100460444 /* HomeWork3_2App.swift */; };
 		571C2CF4279F431100460444 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C2CF3279F431100460444 /* ContentView.swift */; };
 		571C2CF6279F431300460444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571C2CF5279F431300460444 /* Assets.xcassets */; };
-		571C2CF9279F431300460444 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571C2CF8279F431300460444 /* Preview Assets.xcassets */; };
+		571C2D00279F43DA00460444 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571C2CFF279F43DA00460444 /* ColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +18,7 @@
 		571C2CF1279F431100460444 /* HomeWork3_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWork3_2App.swift; sourceTree = "<group>"; };
 		571C2CF3279F431100460444 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		571C2CF5279F431300460444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		571C2CF8279F431300460444 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		571C2CFF279F43DA00460444 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,18 +53,10 @@
 			children = (
 				571C2CF1279F431100460444 /* HomeWork3_2App.swift */,
 				571C2CF3279F431100460444 /* ContentView.swift */,
+				571C2CFF279F43DA00460444 /* ColorView.swift */,
 				571C2CF5279F431300460444 /* Assets.xcassets */,
-				571C2CF7279F431300460444 /* Preview Content */,
 			);
 			path = HomeWork3.2;
-			sourceTree = "<group>";
-		};
-		571C2CF7279F431300460444 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				571C2CF8279F431300460444 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +117,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				571C2CF9279F431300460444 /* Preview Assets.xcassets in Resources */,
 				571C2CF6279F431300460444 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571C2D00279F43DA00460444 /* ColorView.swift in Sources */,
 				571C2CF4279F431100460444 /* ContentView.swift in Sources */,
 				571C2CF2279F431100460444 /* HomeWork3_2App.swift in Sources */,
 			);
@@ -268,7 +260,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HomeWork3.2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HomeWork3.2\"";
 				DEVELOPMENT_TEAM = WPASFV42KH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -297,7 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HomeWork3.2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HomeWork3.2\"";
 				DEVELOPMENT_TEAM = WPASFV42KH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
