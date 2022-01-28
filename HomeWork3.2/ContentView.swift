@@ -19,26 +19,27 @@ struct ContentView: View {
         ZStack {
             Color(.brown)
                 .ignoresSafeArea()
+                .onTapGesture {
+                    focusedField = false
+                }
             VStack(spacing: 20) {
-                ColorView(currentColor: Color(red: sliderValueRed / 255, green: sliderValueGreen / 255, blue: sliderValueBlue / 255))
-                ColorSliderView(value: $sliderValueRed, textColor: .red)
-                    .accentColor(Color.red)
-                    .focused($focusedField)
-                    .toolbar {
-                        ToolbarItemGroup(placement: .keyboard) {
-                            Spacer()
-                            
-                            Button("Done"){
-                                focusedField = false
-                            }
+                ColorView(red: sliderValueRed, green: sliderValueGreen, blue: sliderValueBlue)
+                VStack {
+                    ColorSliderView(value: $sliderValueRed, color: .red)
+                    ColorSliderView(value: $sliderValueGreen, color: .green)
+                    ColorSliderView(value: $sliderValueBlue, color: .blue)
+                }
+                .frame(height: 150)
+                .focused($focusedField)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        
+                        Button("Done"){
+                            focusedField = false
                         }
                     }
-                ColorSliderView(value: $sliderValueGreen, textColor: .green)
-                    .accentColor(Color.green)
-                    .focused($focusedField)
-                ColorSliderView(value: $sliderValueBlue, textColor: .blue)
-                    .accentColor(Color.blue)
-                    .focused($focusedField)
+                }
 
                 Spacer()
             }
@@ -47,45 +48,12 @@ struct ContentView: View {
     }
 }
 
-struct ColorSliderView: View {
-    @Binding var value: Double
-    let textColor: Color
-    
-    var body: some View {
-        HStack {
-            Text("\(lround(value))").foregroundColor(textColor)
-                .frame(width: 40)
-            Slider(value: $value, in: 0...255, step: 1)
-            TextField("255", value: $value, formatter: NumberFormatter())
-                .bordered()
-                .keyboardType(.decimalPad)
-                .textFieldStyle(.roundedBorder)
-                .frame(width: 50)
-                .background(.white)
-                .cornerRadius(4)
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack {
+        ContentView()
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
-struct BorderedViewModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .overlay(
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(lineWidth: 1)
-                    .foregroundColor(.black)
-            )
-    }
-}
-
-extension TextField {
-    func bordered() -> some View {
-        ModifiedContent(content: self, modifier: BorderedViewModifier())
-    }
-}
